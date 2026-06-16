@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProTIP：面向文本到图像扩散模型随机扰动的概率鲁棒性验证 · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#b13d78">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/research-on-generative-models.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Research%20on%20Generative%20Models/2024_ECCV_ProTIP%20Probabilistic%20Robustness%20Verification%20on%20Text-to-Image%20Diffusion%20Models%20Against%20Stochastic%20Perturbation.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/research-on-generative-models.html">返回主题页面</a>
+      <p class="eyebrow">Research on Generative Models · 2024 · ECCV</p>
+      <h1>ProTIP：面向文本到图像扩散模型随机扰动的概率鲁棒性验证</h1>
+      <p class="paper-original-title">ProTIP Probabilistic Robustness Verification on Text-to-Image Diffusion Models Against Stochastic Perturbation</p>
+      <p class="paper-authors-line">Yi Zhang, Yun Tang, Wenjie Ruan, Xiaowei Huang, Siddartha Khastgir, Paul Jennings, Xingyu Zhao</p>
+      <div class="paper-tags detail-tags"><span>概率鲁棒性</span><span>文本到图像扩散模型</span><span>统计验证</span><span>随机扰动</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>文本到图像扩散模型在提示词轻微变化下可能生成语义或视觉分布明显不同的结果。传统二值鲁棒性或最坏情况鲁棒性只能回答“是否存在失败样本”，很难说明在实际部署中失败概率有多高。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>展示价值</h2>
+        <p>这篇论文适合作为生成式模型可信验证的技术起点：它给出了可量化、可复现实验、可用于防御评测的概率鲁棒性框架。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Extracted Figure Page</p>
+        <h2>ProTIP 工作流</h2>
+        <p>代表性框图展示了从文本扰动采样、生成输出分布比较、统计检验到概率鲁棒性估计的完整流程。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Research%20on%20Generative%20Models/2024_ECCV_ProTIP%20Probabilistic%20Robustness%20Verification%20on%20Text-to-Image%20Diffusion%20Models%20Against%20Stochastic%20Perturbation.pdf#page=6" target="_blank" rel="noopener">打开原文第 6 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2024-eccv-protip.png" target="_blank" rel="noopener" aria-label="查看框图大图">
+        <img src="../assets/paper-figures/2024-eccv-protip.png" alt="ProTIP 工作流">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>将 T2I 扩散模型的鲁棒性形式化为概率问题：在给定语义保持约束和扰动分布下，估计导致输出分布显著变化的对抗扰动比例。</li>
+              <li>用序贯统计检验判断单个扰动是否构成对抗样本，并加入有效性/徒劳性早停规则，减少反复生成图片带来的高成本。</li>
+              <li>用自适应浓缩不等式动态决定采样次数，在达到置信目标时及时停止，从而给出带统计保证的鲁棒性结论。</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>把扩散模型鲁棒性从“找一个反例”推进到“估计风险比例”，更贴合生成式系统的实际安全需求。</li>
+              <li>针对输出是分布而非离散标签的特点，把输出分布比较纳入验证过程。</li>
+              <li>在保持统计保证的同时降低采样成本，使不同防御方法可以被统一排序和比较。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

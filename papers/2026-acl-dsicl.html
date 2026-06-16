@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基于模板化 ICL 与防御后缀的 LLM 越狱防御 · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#3f55b6">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/research-on-llms-and-vlms.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_ACL_Defending%20LLMs%20Against%20Jailbreak%20Attacks%20via%20Template-Based%20ICL%20with%20a%20Defensive%20Suffix.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/research-on-llms-and-vlms.html">返回主题页面</a>
+      <p class="eyebrow">Research on LLMs and VLMs · 2026 · ACL</p>
+      <h1>基于模板化 ICL 与防御后缀的 LLM 越狱防御</h1>
+      <p class="paper-original-title">Defending LLMs Against Jailbreak Attacks via Template-Based ICL with a Defensive Suffix</p>
+      <p class="paper-authors-line">Ruiyang Ni, Changlong Li, Shuaibiao Han, Zhiyu Yi, Peipei Xu, Wenjie Ruan</p>
+      <div class="paper-tags detail-tags"><span>越狱防御</span><span>ICL</span><span>防御后缀</span><span>无需微调</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>GCG、AutoDAN 等越狱攻击能诱导对齐后的 LLM 生成有害内容。已有防御常依赖微调或启发式提示，成本高、迁移性不稳定，且可能损害正常任务能力。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>展示价值</h2>
+        <p>该方法适合展示 LLM 防御从“提示词经验”走向“可优化、可评测的提示模板机制”。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Extracted Figure Page</p>
+        <h2>DSICL 方法概览</h2>
+        <p>框图展示了离线防御后缀优化与在线 ICL 示例搜索如何组合成最终安全提示模板。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_ACL_Defending%20LLMs%20Against%20Jailbreak%20Attacks%20via%20Template-Based%20ICL%20with%20a%20Defensive%20Suffix.pdf#page=5" target="_blank" rel="noopener">打开原文第 5 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2026-acl-dsicl.png" target="_blank" rel="noopener" aria-label="查看框图大图">
+        <img src="../assets/paper-figures/2026-acl-dsicl.png" alt="DSICL 方法概览">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>离线阶段通过迭代随机搜索优化一个 defensive suffix，用于抵消攻击后缀对生成方向的影响。</li>
+              <li>在线阶段为当前输入随机搜索有效 ICL demonstrations，把原始指令、示例和防御后缀组装为结构化模板。</li>
+              <li>在白盒和黑盒攻击下评估攻击成功率、良性任务能力和计算开销。</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>把无需微调的 ICL 防御与可复用防御后缀结合，降低部署成本。</li>
+              <li>利用模板结构稳定地约束模型响应，而不是只追加静态安全提示。</li>
+              <li>在保持 benign utility 的同时把强越狱攻击成功率压到接近 0。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

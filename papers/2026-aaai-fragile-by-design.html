@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fragile by Design：个性化生成对抗防御的局限性 · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#b13d78">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/research-on-generative-models.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Research%20on%20Generative%20Models/2026_AAAI_Fragile%20by%20Design%20On%20the%20Limits%20of%20Adversarial%20Defenses%20in%20Personalized%20Generation.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/research-on-generative-models.html">返回主题页面</a>
+      <p class="eyebrow">Research on Generative Models · 2026 · AAAI</p>
+      <h1>Fragile by Design：个性化生成对抗防御的局限性</h1>
+      <p class="paper-original-title">Fragile by Design On the Limits of Adversarial Defenses in Personalized Generation</p>
+      <p class="paper-authors-line">Zhen Chen, Yi Zhang, Xiangyu Yin, Chengxuan Qin, Xingyu Zhao, Xiaowei Huang, Wenjie Ruan</p>
+      <div class="paper-tags detail-tags"><span>个性化生成</span><span>身份隐私</span><span>对抗防御</span><span>图像净化</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>DreamBooth 等个性化生成技术会从用户照片中学习身份特征，带来人脸身份泄露风险。已有 Anti-DreamBooth 一类防御通过给照片加入对抗扰动来阻止个性化，但这些扰动是否真的在真实上传、压缩、滤波等场景中稳定有效，仍缺少系统评估。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>展示价值</h2>
+        <p>它更像一篇安全边界论文：不是提出更强防御，而是证明现有防御的关键假设在现实条件下站不稳。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Extracted Figure Page</p>
+        <h2>净化操作破坏反个性化防御</h2>
+        <p>该图直观展示：用户图片上的对抗扰动原本能阻止 DreamBooth 记住身份，但经过简单净化后，模型又能恢复个性化生成能力。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Research%20on%20Generative%20Models/2026_AAAI_Fragile%20by%20Design%20On%20the%20Limits%20of%20Adversarial%20Defenses%20in%20Personalized%20Generation.pdf#page=2" target="_blank" rel="noopener">打开原文第 2 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2026-aaai-fragile-by-design.png" target="_blank" rel="noopener" aria-label="查看框图大图">
+        <img src="../assets/paper-figures/2026-aaai-fragile-by-design.png" alt="净化操作破坏反个性化防御">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>提出 AntiDB_Purify 评估框架，把传统图像滤波和对抗净化都视为现实攻击者可能采用的净化威胁。</li>
+              <li>从视觉伪影、频域特征、身份恢复效果等角度评估多种反个性化防御在净化前后的变化。</li>
+              <li>用 DreamBooth 生成结果和身份相关指标验证：净化后的图片是否重新允许模型记忆并复现用户身份。</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>指出当前反个性化防御不仅可能可见，而且高度脆弱，容易给用户造成“安全幻觉”。</li>
+              <li>把防御评测从无处理图片扩展到真实链路中的净化/滤波威胁模型。</li>
+              <li>为后续防御提出更高要求：扰动需要同时不可感知、抗净化、能稳定阻断身份记忆。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

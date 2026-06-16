@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基于预测失谐后缀优化与图像短语注入的 VLM 越狱 · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#3f55b6">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/research-on-llms-and-vlms.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_CVPR_Jailbreaking%20Vision-Language%20Models%20via%20Dissonance-Guided%20Suffix%20Optimization%20and%20Image-Phrase%20Injection.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/research-on-llms-and-vlms.html">返回主题页面</a>
+      <p class="eyebrow">Research on LLMs and VLMs · 2026 · CVPR</p>
+      <h1>基于预测失谐后缀优化与图像短语注入的 VLM 越狱</h1>
+      <p class="paper-original-title">Jailbreaking Vision-Language Models via Dissonance-Guided Suffix Optimization and Image-Phrase Injection</p>
+      <p class="paper-authors-line">Jiacheng Pi, Zhiguo Yang, Xingxing Huang, Dongsheng Xu, Ruizhi Zhong, Wenjie Ruan</p>
+      <div class="paper-tags detail-tags"><span>VLM 越狱</span><span>多模态攻击</span><span>预测失谐</span><span>图像短语注入</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>VLM 同时接收图像和文本，攻击面比纯文本 LLM 更大。已有后缀优化方法在离散 token 空间中容易陷入局部最优，图像扰动方法跨模型迁移性又较弱。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>展示价值</h2>
+        <p>这篇论文展示了多模态安全的关键差异：攻击不只发生在文本，也可以利用图像里的可读语义和模型跨模态融合机制。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Extracted Figure Page</p>
+        <h2>DGSIP 攻击框架</h2>
+        <p>图中展示目标 VLM 与未对齐引导模型之间的预测失谐如何指导文本后缀优化，并与图像短语注入联合攻击。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_CVPR_Jailbreaking%20Vision-Language%20Models%20via%20Dissonance-Guided%20Suffix%20Optimization%20and%20Image-Phrase%20Injection.pdf#page=3" target="_blank" rel="noopener">打开原文第 3 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2026-cvpr-dgsip.png" target="_blank" rel="noopener" aria-label="查看框图大图">
+        <img src="../assets/paper-figures/2026-cvpr-dgsip.png" alt="DGSIP 攻击框架">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>用目标模型和未对齐 guide model 的预测差异识别被安全对齐压制的 token，作为后缀搜索信号。</li>
+              <li>联合优化文本 adversarial suffix 与嵌入图像中的 phrase 内容/呈现方式，利用 VLM 的跨模态敏感性。</li>
+              <li>在 MiniGPT-4、InstructBLIP、LLaVA 以及 GPT-4o-Mini、Gemini、Qwen-VL 等黑盒模型上评估迁移效果。</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>用 predictive dissonance 替代粗糙梯度近似，为离散后缀搜索提供更直接的安全对齐信号。</li>
+              <li>把文本后缀和图像短语注入组合成协同攻击，提升多模态越狱强度。</li>
+              <li>证明开源 VLM 上优化得到的攻击可以迁移到商业黑盒 VLM，暴露现实风险。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

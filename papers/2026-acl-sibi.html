@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>字典引导的稀疏 Logit 编辑可靠越狱攻击 · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#3f55b6">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/research-on-llms-and-vlms.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_ACL_Dictionary%20Guided%20Sparse%20Logit%20Editing%20for%20Reliable%20Jailbreak%20Attacks.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/research-on-llms-and-vlms.html">返回主题页面</a>
+      <p class="eyebrow">Research on LLMs and VLMs · 2026 · ACL</p>
+      <h1>字典引导的稀疏 Logit 编辑可靠越狱攻击</h1>
+      <p class="paper-original-title">Dictionary Guided Sparse Logit Editing for Reliable Jailbreak Attacks</p>
+      <p class="paper-authors-line">Shuaibiao Han, Ruiyang Ni, Changlong Li, Zhiyu Yi, Peipei Xu, Wenjie Ruan</p>
+      <div class="paper-tags detail-tags"><span>白盒越狱</span><span>Logit 编辑</span><span>稀疏干预</span><span>安全对齐</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>许多越狱攻击需要高成本梯度优化，生成的攻击提示也常常不可解释、困惑度高。已有 logit 空间攻击更高效，但可能依赖辅助模型或复杂流水线。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>展示价值</h2>
+        <p>这篇论文适合展示 LLM 攻击研究如何从文本表面扰动深入到解码分布与安全对齐机制。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Extracted Figure Page</p>
+        <h2>SIBI 框架</h2>
+        <p>框图展示了离线字典挖掘、拒答 token 惩罚/奖励 token 提升，以及推理时稀疏 logit 编辑的攻击流程。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_ACL_Dictionary%20Guided%20Sparse%20Logit%20Editing%20for%20Reliable%20Jailbreak%20Attacks.pdf#page=4" target="_blank" rel="noopener">打开原文第 4 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2026-acl-sibi.png" target="_blank" rel="noopener" aria-label="查看框图大图">
+        <img src="../assets/paper-figures/2026-acl-sibi.png" alt="SIBI 框架">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>提出 SIBI：白盒、推理时、无需梯度和辅助模型的稀疏 logit 编辑攻击。</li>
+              <li>离线挖掘 tokenizer 对齐的惩罚/奖励 token 字典，识别拒答路径和服从路径中的关键语义索引。</li>
+              <li>推理时只修改少量 pre-softmax logits，并用温度一致缩放和混合范数 trust region 保持流畅性。</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>用小字典和稀疏干预替代长时间 prompt 优化，显著降低时间和显存开销。</li>
+              <li>把越狱机制定位到拒答 token 的根部抑制，解释性强于黑盒字符串攻击。</li>
+              <li>揭示仅靠内部 hardening 不足，外部语义审计对抵御这类攻击更有效。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

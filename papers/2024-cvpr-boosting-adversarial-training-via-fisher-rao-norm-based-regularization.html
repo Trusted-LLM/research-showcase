@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <title>对抗训练：Boosting Adversarial Training via Fisher-Rao Norm-Based Regularization · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#25805a">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/defense-on-dnns.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Defense%20on%20DNNs/2024_CVPR_Boosting%20Adversarial%20Training%20via%20Fisher-Rao%20Norm-Based%20Regularization.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/defense-on-dnns.html">返回主题页面</a>
+      <p class="eyebrow">Defense on DNNs · 2024 · CVPR</p>
+      <h1>对抗训练：Boosting Adversarial Training via Fisher-Rao Norm-Based Regularization</h1>
+      <p class="paper-original-title">Boosting Adversarial Training via Fisher-Rao Norm-Based Regularization</p>
+      <p class="paper-authors-line">Xiangyu Yin, Wenjie Ruan*</p>
+      <div class="paper-tags detail-tags"><span>Adversarial Training</span><span>Fisher-Rao Norm</span><span>Adversarial Robustness</span><span>Adversarial Defense</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>这篇论文属于“深度神经网络防御”方向，核心关注 Adversarial Training, Fisher-Rao Norm, Adversarial Robustness, Adversarial Defense。它要解决的不是单纯提升一个指标，而是在 CVPR 场景下，让模型、数据或感知系统面对真实扰动和任务约束时仍然可用、可评估、可解释。关注模型在扰动、分布变化或任务约束下是否稳定。研究对抗扰动如何改变模型决策或系统行为。目标是在不显著牺牲任务性能的情况下提升安全性。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>展示价值</h2>
+        <p>用于展示时，这篇论文可以放在“问题定义 - 方法设计 - 证据评估”的链条中理解。它的价值在于把 Adversarial Training 具体化为一个可实验验证的研究问题，并通过 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)（CCF A, CORE A*） 的发表形态呈现该方向的代表性进展。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Extracted Figure Page</p>
+        <h2>论文方法/实验代表页</h2>
+        <p>该页从原文 PDF 第 3 页截取，通常包含方法框图、系统流程、算法说明或实验设置。展示时可先用它建立视觉锚点，再结合下方中文说明讲清研究问题与技术贡献。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Defense%20on%20DNNs/2024_CVPR_Boosting%20Adversarial%20Training%20via%20Fisher-Rao%20Norm-Based%20Regularization.pdf#page=3" target="_blank" rel="noopener">打开原文第 3 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2024-cvpr-boosting-adversarial-training-via-fisher-rao-norm-based-regularization.png" target="_blank" rel="noopener" aria-label="查看框图大图">
+        <img src="../assets/paper-figures/2024-cvpr-boosting-adversarial-training-via-fisher-rao-norm-based-regularization.png" alt="论文方法/实验代表页">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>首先明确任务对象与威胁/噪声来源：围绕 Adversarial Training, Fisher-Rao Norm 定义输入、输出、约束条件和评价目标。</li>
+              <li>建立风险度量、评估算法或认证机制来刻画鲁棒边界。</li>
+              <li>在扰动约束内优化攻击样本或训练防御模型。</li>
+              <li>通过正则化、训练策略、认证平滑或后门抑制加固模型。</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>问题视角上，把 Adversarial Training 与 Fisher-Rao Norm 放到同一实验框架中，避免只做单点性能优化。</li>
+              <li>技术实现上，将任务结构、模型行为和真实约束结合起来，使方法更贴近可部署系统。</li>
+              <li>评估方式上，不只看平均准确率，而强调鲁棒性、安全性、可解释性或跨场景泛化表现。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

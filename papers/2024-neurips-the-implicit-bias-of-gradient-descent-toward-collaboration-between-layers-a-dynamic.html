@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <title>深度神经网络鲁棒性理论：The Implicit Bias of Gradient Descent Toward Collaboration Between Layers A Dynamic Analysis of Multilayer Perceptrons · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#8b6f24">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/robustness-theory-of-dnns.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Robustness%20Theory%20of%20DNNs/2024_NeurIPS_The%20Implicit%20Bias%20of%20Gradient%20Descent%20Toward%20Collaboration%20Between%20Layers%20A%20Dynamic%20Analysis%20of%20Multilayer%20Perceptrons.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/robustness-theory-of-dnns.html">返回主题页面</a>
+      <p class="eyebrow">Robustness Theory of DNNs · 2024 · NeurIPS</p>
+      <h1>深度神经网络鲁棒性理论：The Implicit Bias of Gradient Descent Toward Collaboration Between Layers A Dynamic Analysis of Multilayer Perceptrons</h1>
+      <p class="paper-original-title">The Implicit Bias of Gradient Descent Toward Collaboration Between Layers A Dynamic Analysis of Multilayer Perceptrons</p>
+      <p class="paper-authors-line">Zheng Wang, Geyong Min, Wenjie Ruan*</p>
+      <div class="paper-tags detail-tags"><span>Gradient Descent</span><span>Implicit Bias</span><span>Adversarial Robustness</span><span>Robustness Theory</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>这篇论文属于“深度神经网络鲁棒性理论”方向，核心关注 Gradient Descent, Implicit Bias, Adversarial Robustness, Robustness Theory。它要解决的不是单纯提升一个指标，而是在 NeurIPS 场景下，让模型、数据或感知系统面对真实扰动和任务约束时仍然可用、可评估、可解释。关注模型在扰动、分布变化或任务约束下是否稳定。研究对抗扰动如何改变模型决策或系统行为。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>展示价值</h2>
+        <p>用于展示时，这篇论文可以放在“问题定义 - 方法设计 - 证据评估”的链条中理解。它的价值在于把 Gradient Descent 具体化为一个可实验验证的研究问题，并通过 Conference on Neural Information Processing Systems (NeurIPS)（CCF A, CORE A*） 的发表形态呈现该方向的代表性进展。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Extracted Figure Page</p>
+        <h2>论文方法/实验代表页</h2>
+        <p>该页从原文 PDF 第 6 页截取，通常包含方法框图、系统流程、算法说明或实验设置。展示时可先用它建立视觉锚点，再结合下方中文说明讲清研究问题与技术贡献。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Robustness%20Theory%20of%20DNNs/2024_NeurIPS_The%20Implicit%20Bias%20of%20Gradient%20Descent%20Toward%20Collaboration%20Between%20Layers%20A%20Dynamic%20Analysis%20of%20Multilayer%20Perceptrons.pdf#page=6" target="_blank" rel="noopener">打开原文第 6 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2024-neurips-the-implicit-bias-of-gradient-descent-toward-collaboration-between-layers-a-dynamic.png" target="_blank" rel="noopener" aria-label="查看框图大图">
+        <img src="../assets/paper-figures/2024-neurips-the-implicit-bias-of-gradient-descent-toward-collaboration-between-layers-a-dynamic.png" alt="论文方法/实验代表页">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>首先明确任务对象与威胁/噪声来源：围绕 Gradient Descent, Implicit Bias 定义输入、输出、约束条件和评价目标。</li>
+              <li>建立风险度量、评估算法或认证机制来刻画鲁棒边界。</li>
+              <li>在扰动约束内优化攻击样本或训练防御模型。</li>
+              <li>最后通过与基线方法、消融实验或真实场景案例对比，验证方法在 Gradient Descent 上的有效性。</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>问题视角上，把 Gradient Descent 与 Implicit Bias 放到同一实验框架中，避免只做单点性能优化。</li>
+              <li>技术实现上，将任务结构、模型行为和真实约束结合起来，使方法更贴近可部署系统。</li>
+              <li>评估方式上，不只看平均准确率，而强调鲁棒性、安全性、可解释性或跨场景泛化表现。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

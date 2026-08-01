@@ -31,24 +31,24 @@
       <article class="paper-explain">
         <p class="eyebrow">Problem</p>
         <h2>解决的问题</h2>
-        <p>这篇论文属于“深度神经网络验证”方向，核心关注 Natural Perturbations, Out-of-Distribution, Robustness Verification, Provable Guarantees。它要解决的不是单纯提升一个指标，而是在 MLJ 场景下，让模型、数据或感知系统面对真实扰动和任务约束时仍然可用、可评估、可解释。关注模型在扰动、分布变化或任务约束下是否稳定。把经验测试推进到带边界或置信度的安全保证。</p>
+        <p>OOD 检测器结构非标准，传统神经网络验证难以直接适用，也缺少对旋转和光照等自然扰动的保证。</p>
       </article>
       <article class="paper-explain">
         <p class="eyebrow">Value</p>
-        <h2>展示价值</h2>
-        <p>用于展示时，这篇论文可以放在“问题定义 - 方法设计 - 证据评估”的链条中理解。它的价值在于把 Natural Perturbations 具体化为一个可实验验证的研究问题，并通过 Machine Learning（CCF A） 的发表形态呈现该方向的代表性进展。</p>
+        <h2>论文结论</h2>
+        <p>在准确性和效率上优于基线，并给出自然扰动条件下的可证明 OOD 鲁棒性结论。</p>
       </article>
     </section>
 
     <section class="paper-figure-section">
       <div class="paper-figure-copy">
-        <p class="eyebrow">ImageGen-style Representative Page</p>
-        <h2>研究问题、创新点与解决思路代表页</h2>
-        <p>该代表页参考学术汇报信息图风格生成，用统一的深蓝标题栏、问题/思路提示带和三段式方法卡片，总结论文的主要研究问题、创新点与解决思路。</p>
+        <p class="eyebrow">Paper-grounded Academic Summary</p>
+        <h2>论文研究问题与技术路线</h2>
+        <p>该代表页依据原文摘要、贡献段与方法图注生成。方法视觉由 ImageGen 按论文证据逐篇绘制，中文研究问题、技术路线、创新点与实验结论采用确定性排版，以保证内容与字符准确。</p>
         <a class="text-link" href="../papers_classified_by_topic/Verification%20on%20DNNs/2025_MLJ_Verification%20on%20out-of-distribution%20detectors%20under%20natural%20perturbations.pdf" target="_blank" rel="noopener">打开原文 PDF</a>
       </div>
-      <a class="figure-frame" href="../assets/paper-figures/2025-mlj-verification-on-out-of-distribution-detectors-under-natural-perturbations.png" target="_blank" rel="noopener" aria-label="查看方法图大图">
-        <img src="../assets/paper-figures/2025-mlj-verification-on-out-of-distribution-detectors-under-natural-perturbations.png" alt="研究问题、创新点与解决思路代表页">
+      <a class="figure-frame" href="../assets/paper-figures/2025-mlj-verification-on-out-of-distribution-detectors-under-natural-perturbations.png" target="_blank" rel="noopener" aria-label="查看论文研究问题与技术路线大图">
+        <img src="../assets/paper-figures/2025-mlj-verification-on-out-of-distribution-detectors-under-natural-perturbations.png" alt="论文研究问题、技术路线与创新总结">
       </a>
     </section>
 
@@ -57,19 +57,17 @@
         <p class="eyebrow">Technical Route</p>
         <h2>技术手段</h2>
         <ol>
-              <li>首先明确任务对象与威胁/噪声来源：围绕 Natural Perturbations, Out-of-Distribution 定义输入、输出、约束条件和评价目标。</li>
-              <li>建立风险度量、评估算法或认证机制来刻画鲁棒边界。</li>
-              <li>使用可达性分析、模型检查、覆盖测试或概率估计进行验证。</li>
-              <li>最后通过与基线方法、消融实验或真实场景案例对比，验证方法在 Natural Perturbations 上的有效性。</li>
+              <li>证明常用 OOD 分数在自然变换下的 Lipschitz 连续性</li>
+              <li>用极值理论及动态安全因子估计常数</li>
+              <li>转化为填充空间的 Lipschitz 全局优化</li>
         </ol>
       </article>
       <article class="paper-explain">
         <p class="eyebrow">Innovation</p>
         <h2>创新性</h2>
         <ul>
-              <li>问题视角上，把 Natural Perturbations 与 Out-of-Distribution 放到同一实验框架中，避免只做单点性能优化。</li>
-              <li>技术实现上，将任务结构、模型行为和真实约束结合起来，使方法更贴近可部署系统。</li>
-              <li>评估方式上，不只看平均准确率，而强调鲁棒性、安全性、可解释性或跨场景泛化表现。</li>
+              <li>将 OOD 检测函数的连续性理论与黑盒 Lipschitz 优化结合，可覆盖多种检测器和自然变换。</li>
+              <li>论文证据：在准确性和效率上优于基线，并给出自然扰动条件下的可证明 OOD 鲁棒性结论。</li>
         </ul>
       </article>
     </section>

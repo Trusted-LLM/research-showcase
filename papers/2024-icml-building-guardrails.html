@@ -31,24 +31,24 @@
       <article class="paper-explain">
         <p class="eyebrow">Problem</p>
         <h2>解决的问题</h2>
-        <p>Guardrails 已成为 LLM 应用的重要安全层，但很多实现依赖规则拼装、单点分类器或经验提示词，难以覆盖复杂上下文、不同用户需求和动态风险。</p>
+        <p>零散的输入过滤或输出审查无法覆盖大模型应用中的多源风险，护栏设计缺少统一需求与评价方法。</p>
       </article>
       <article class="paper-explain">
         <p class="eyebrow">Value</p>
-        <h2>展示价值</h2>
-        <p>这篇立场论文能帮助团队设计 LLM 安全产品架构，避免把 guardrails 当作临时补丁。</p>
+        <h2>论文结论</h2>
+        <p>立场论文通过案例与设计原则归纳当前护栏缺陷，并提出系统化研究和评价议程。</p>
       </article>
     </section>
 
     <section class="paper-figure-section">
       <div class="paper-figure-copy">
-        <p class="eyebrow">ImageGen-style Representative Page</p>
-        <h2>研究问题、创新点与解决思路代表页</h2>
-        <p>该代表页参考学术汇报信息图风格生成，用统一的深蓝标题栏、问题/思路提示带和三段式方法卡片，总结论文的主要研究问题、创新点与解决思路。</p>
+        <p class="eyebrow">Paper-grounded Academic Summary</p>
+        <h2>论文研究问题与技术路线</h2>
+        <p>该代表页依据原文摘要、贡献段与方法图注生成。方法视觉由 ImageGen 按论文证据逐篇绘制，中文研究问题、技术路线、创新点与实验结论采用确定性排版，以保证内容与字符准确。</p>
         <a class="text-link" href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2024_ICML_Position%20Building%20Guardrails%20for%20Large%20Language%20Models%20Requires%20Systematic%20Design.pdf" target="_blank" rel="noopener">打开原文 PDF</a>
       </div>
-      <a class="figure-frame" href="../assets/paper-figures/2024-icml-building-guardrails.png" target="_blank" rel="noopener" aria-label="查看方法图大图">
-        <img src="../assets/paper-figures/2024-icml-building-guardrails.png" alt="研究问题、创新点与解决思路代表页">
+      <a class="figure-frame" href="../assets/paper-figures/2024-icml-building-guardrails.png" target="_blank" rel="noopener" aria-label="查看论文研究问题与技术路线大图">
+        <img src="../assets/paper-figures/2024-icml-building-guardrails.png" alt="论文研究问题、技术路线与创新总结">
       </a>
     </section>
 
@@ -57,18 +57,17 @@
         <p class="eyebrow">Technical Route</p>
         <h2>技术手段</h2>
         <ol>
-              <li>考察 Llama Guard、Nvidia NeMo、Guardrails AI 等开源方案的工作流和能力边界。</li>
-              <li>提出 guardrail 设计需要从社会技术需求出发，先明确应用场景、风险类型和可接受行为边界。</li>
-              <li>主张采用神经符号实现、系统测试和验证方法来保证规则表达能力、泛化能力和最终质量。</li>
+              <li>从风险、参与者和系统边界定义护栏需求</li>
+              <li>组合输入、模型、工具调用与输出层控制</li>
+              <li>以覆盖性、适应性、效用和成本进行系统评测</li>
         </ol>
       </article>
       <article class="paper-explain">
         <p class="eyebrow">Innovation</p>
         <h2>创新性</h2>
         <ul>
-              <li>把 guardrail 从“一个过滤器”提升为需要需求分析、实现、验证和维护的系统工程问题。</li>
-              <li>指出不同应用上下文下的安全要求并不相同，需要多学科协作定义技术规格。</li>
-              <li>强调用 V&amp;V 和测试评价 guardrail 本身，而不仅评价底层 LLM。</li>
+              <li>将护栏视为独立于基础模型的系统工程问题，强调组件协同、生命周期更新和可验证需求。</li>
+              <li>论文证据：立场论文通过案例与设计原则归纳当前护栏缺陷，并提出系统化研究和评价议程。</li>
         </ul>
       </article>
     </section>

@@ -31,24 +31,24 @@
       <article class="paper-explain">
         <p class="eyebrow">Problem</p>
         <h2>解决的问题</h2>
-        <p>这篇论文属于“普适计算与鲁棒感知”方向，核心关注 Posture Recognition, RFID Sensing, Activity Recognition, Device-Free Sensing。它要解决的不是单纯提升一个指标，而是在 ICPADS 场景下，让模型、数据或感知系统面对真实扰动和任务约束时仍然可用、可评估、可解释。把弱无线信号转化为可学习的行为、位置或姿态表征。避免用户佩戴额外设备，降低真实场景部署门槛。面向日常活动识别中的噪声、个体差异和在线变化。</p>
+        <p>不同用户和环境会持续改变 RFID 姿态信号分布，离线模型部署后容易失效。</p>
       </article>
       <article class="paper-explain">
         <p class="eyebrow">Value</p>
-        <h2>展示价值</h2>
-        <p>用于展示时，这篇论文可以放在“问题定义 - 方法设计 - 证据评估”的链条中理解。它的价值在于把 Posture Recognition 具体化为一个可实验验证的研究问题，并通过 IEEE International Conference on Parallel and Distributed Systems (ICPADS)（CCF C, CORE B） 的发表形态呈现该方向的代表性进展。</p>
+        <h2>论文结论</h2>
+        <p>实验验证无佩戴、实时姿态识别的可行性，并分析连续数据分割与概率模型效果。</p>
       </article>
     </section>
 
     <section class="paper-figure-section">
       <div class="paper-figure-copy">
-        <p class="eyebrow">ImageGen-style Representative Page</p>
-        <h2>研究问题、创新点与解决思路代表页</h2>
-        <p>该代表页参考学术汇报信息图风格生成，用统一的深蓝标题栏、问题/思路提示带和三段式方法卡片，总结论文的主要研究问题、创新点与解决思路。</p>
+        <p class="eyebrow">Paper-grounded Academic Summary</p>
+        <h2>论文研究问题与技术路线</h2>
+        <p>该代表页依据原文摘要、贡献段与方法图注生成。方法视觉由 ImageGen 按论文证据逐篇绘制，中文研究问题、技术路线、创新点与实验结论采用确定性排版，以保证内容与字符准确。</p>
         <a class="text-link" href="../papers_classified_by_topic/Pervasive%20Computing%20and%20Robust%20Sensing/2015_ICPADS_Unobtrusive%20Posture%20Recognition%20via%20Online%20Learning%20of%20Multi-dimensional%20RFID%20Received%20Signal%20Strength.pdf" target="_blank" rel="noopener">打开原文 PDF</a>
       </div>
-      <a class="figure-frame" href="../assets/paper-figures/2015-icpads-unobtrusive-posture-recognition-via-online-learning-of-multi-dimensional-rfid-receiv.png" target="_blank" rel="noopener" aria-label="查看方法图大图">
-        <img src="../assets/paper-figures/2015-icpads-unobtrusive-posture-recognition-via-online-learning-of-multi-dimensional-rfid-receiv.png" alt="研究问题、创新点与解决思路代表页">
+      <a class="figure-frame" href="../assets/paper-figures/2015-icpads-unobtrusive-posture-recognition-via-online-learning-of-multi-dimensional-rfid-receiv.png" target="_blank" rel="noopener" aria-label="查看论文研究问题与技术路线大图">
+        <img src="../assets/paper-figures/2015-icpads-unobtrusive-posture-recognition-via-online-learning-of-multi-dimensional-rfid-receiv.png" alt="论文研究问题、技术路线与创新总结">
       </a>
     </section>
 
@@ -57,19 +57,17 @@
         <p class="eyebrow">Technical Route</p>
         <h2>技术手段</h2>
         <ol>
-              <li>首先明确任务对象与威胁/噪声来源：围绕 Posture Recognition, RFID Sensing 定义输入、输出、约束条件和评价目标。</li>
-              <li>利用信号强度、相位、Doppler 或标签阵列特征建立非接触式感知流程。</li>
-              <li>从环境信号变化中反推出人的位置、动作或交互状态。</li>
-              <li>通过稀疏表示、压缩表示或在线学习提取稳定行为模式。</li>
+              <li>连续读取被动标签阵列的多维 RSSI</li>
+              <li>用斜率变化检测同步分割姿态片段</li>
+              <li>学习每类姿态的概率分布并实时分类</li>
         </ol>
       </article>
       <article class="paper-explain">
         <p class="eyebrow">Innovation</p>
         <h2>创新性</h2>
         <ul>
-              <li>问题视角上，把 Posture Recognition 与 RFID Sensing 放到同一实验框架中，避免只做单点性能优化。</li>
-              <li>技术实现上，将任务结构、模型行为和真实约束结合起来，使方法更贴近可部署系统。</li>
-              <li>评估方式上，不只看平均准确率，而强调鲁棒性、安全性、可解释性或跨场景泛化表现。</li>
+              <li>提出适用于多维流式 RSSI 的轻量同步分割，使低成本被动 RFID 能在线识别姿态。</li>
+              <li>论文证据：实验验证无佩戴、实时姿态识别的可行性，并分析连续数据分割与概率模型效果。</li>
         </ul>
       </article>
     </section>

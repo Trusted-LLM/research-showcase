@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   <title>课题组研究主题与论文成果全景</title>
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=20260801-relations">
 </head>
 <body>
   <header class="site-header">
@@ -314,77 +314,68 @@
     </div>
     </section>
 
-    <section class="split-band" id="relations">
-      <div>
-        <p class="eyebrow">Relations</p>
-        <h2>主题之间的研究逻辑</h2>
-        <p>整体脉络从真实世界感知和数据分析出发，经由鲁棒性理论与形式化验证，进入深度模型攻防，再扩展到生成式模型、LLM 和 VLM 的安全前沿。</p>
-        <ul class="relation-list">
-        <li>
-          <a href="topics/pervasive-computing-and-robust-sensing.html">普适计算与鲁棒感知</a>
-          <span>传感数据质量</span>
-          <a href="topics/robust-data-analytics.html">鲁棒数据分析</a>
-        </li>
-        
-        <li>
-          <a href="topics/robust-data-analytics.html">鲁棒数据分析</a>
-          <span>问题抽象</span>
-          <a href="topics/robustness-theory-of-dnns.html">深度神经网络鲁棒性理论</a>
-        </li>
-        
-        <li>
-          <a href="topics/robustness-theory-of-dnns.html">深度神经网络鲁棒性理论</a>
-          <span>度量与认证目标</span>
-          <a href="topics/verification-on-dnns.html">深度神经网络验证</a>
-        </li>
-        
-        <li>
-          <a href="topics/verification-on-dnns.html">深度神经网络验证</a>
-          <span>安全证据反馈</span>
-          <a href="topics/defense-on-dnns.html">深度神经网络防御</a>
-        </li>
-        
-        <li>
-          <a href="topics/attacking-on-dnns.html">深度神经网络攻击</a>
-          <span>攻防闭环</span>
-          <a href="topics/defense-on-dnns.html">深度神经网络防御</a>
-        </li>
-        
-        <li>
-          <a href="topics/robustness-theory-of-dnns.html">深度神经网络鲁棒性理论</a>
-          <span>扰动与风险模型</span>
-          <a href="topics/attacking-on-dnns.html">深度神经网络攻击</a>
-        </li>
-        
-        <li>
-          <a href="topics/verification-on-dnns.html">深度神经网络验证</a>
-          <span>概率验证扩展</span>
-          <a href="topics/research-on-generative-models.html">生成式模型可信研究</a>
-        </li>
-        
-        <li>
-          <a href="topics/defense-on-dnns.html">深度神经网络防御</a>
-          <span>防护范式迁移</span>
-          <a href="topics/research-on-llms-and-vlms.html">大语言/视觉语言模型安全</a>
-        </li>
-        
-        <li>
-          <a href="topics/attacking-on-dnns.html">深度神经网络攻击</a>
-          <span>越狱与红队评测</span>
-          <a href="topics/research-on-llms-and-vlms.html">大语言/视觉语言模型安全</a>
-        </li>
-        
-        <li>
-          <a href="topics/research-on-generative-models.html">生成式模型可信研究</a>
-          <span>多模态生成安全</span>
-          <a href="topics/research-on-llms-and-vlms.html">大语言/视觉语言模型安全</a>
-        </li>
-        </ul>
+    <section class="section-band research-logic-band" id="relations">
+      <div class="logic-heading">
+        <div>
+          <p class="eyebrow">Research Continuity</p>
+          <h2>主题之间的研究逻辑</h2>
+        </div>
+        <p>研究主线围绕“如何在开放、不确定且可被攻击的环境中建立可信智能系统”持续推进：从真实世界数据与感知出发，形成可计算的鲁棒性理论和验证证据，再通过攻防闭环迁移到生成式模型、LLM 与 VLM。</p>
       </div>
-      <div>
-        <p class="eyebrow">Timeline</p>
-        <h2>成果时间分布</h2>
-        <div class="timeline-bars"><span style="--bar-height:44.2px"><b>3</b><em>2014</em></span><span style="--bar-height:60.5px"><b>6</b><em>2015</em></span><span style="--bar-height:76.7px"><b>9</b><em>2016</em></span><span style="--bar-height:55.1px"><b>5</b><em>2017</em></span><span style="--bar-height:60.5px"><b>6</b><em>2018</em></span><span style="--bar-height:38.8px"><b>2</b><em>2019</em></span><span style="--bar-height:60.5px"><b>6</b><em>2020</em></span><span style="--bar-height:49.6px"><b>4</b><em>2021</em></span><span style="--bar-height:49.6px"><b>4</b><em>2022</em></span><span style="--bar-height:92.9px"><b>12</b><em>2023</em></span><span style="--bar-height:120.0px"><b>17</b><em>2024</em></span><span style="--bar-height:38.8px"><b>2</b><em>2025</em></span><span style="--bar-height:76.7px"><b>9</b><em>2026</em></span></div>
+
+      <ol class="logic-stages" aria-label="四阶段研究演进主轴">
+        <li style="--stage-color:#12756f">
+          <div class="stage-meta"><span>01</span><time>2014-2021</time></div>
+          <h3>真实世界鲁棒感知</h3>
+          <p>从 RFID、音频与多传感数据中的缺失、噪声和场景变化出发，建立面向真实部署的数据质量与鲁棒感知基础。</p>
+          <div class="stage-topics"><a href="topics/pervasive-computing-and-robust-sensing.html">普适计算与鲁棒感知</a><a href="topics/robust-data-analytics.html">鲁棒数据分析</a></div>
+          <strong>独特性：把环境不确定性转化为可学习、可恢复的数据问题</strong>
+        </li>
+        <li style="--stage-color:#6f56c4">
+          <div class="stage-meta"><span>02</span><time>2018-2025</time></div>
+          <h3>理论度量与形式化证据</h3>
+          <p>将经验鲁棒性提升为可定义、可计算、可证明的问题，发展可达性、全局鲁棒性、概率风险和策略认证方法。</p>
+          <div class="stage-topics"><a href="topics/robustness-theory-of-dnns.html">深度神经网络鲁棒性理论</a><a href="topics/verification-on-dnns.html">深度神经网络验证</a></div>
+          <strong>独特性：以形式化证据连接模型行为、风险边界与安全保证</strong>
+        </li>
+        <li style="--stage-color:#c8453d">
+          <div class="stage-meta"><span>03</span><time>2020-2026</time></div>
+          <h3>攻击发现与防御反馈</h3>
+          <p>以通用、稀疏、黑盒和语义攻击暴露失效边界，再将验证证据反馈到对抗训练、公平学习和后门净化。</p>
+          <div class="stage-topics"><a href="topics/attacking-on-dnns.html">深度神经网络攻击</a><a href="topics/defense-on-dnns.html">深度神经网络防御</a></div>
+          <strong>独特性：形成“攻击发现问题、验证量化风险、防御闭环修复”的共演机制</strong>
+        </li>
+        <li style="--stage-color:#3f55b6">
+          <div class="stage-meta"><span>04</span><time>2024-2026</time></div>
+          <h3>基础模型与生成安全</h3>
+          <p>把可信学习方法扩展到生成分布、越狱、guardrails、内部激活和视觉语言表征，覆盖开放式交互与多模态风险。</p>
+          <div class="stage-topics"><a href="topics/research-on-generative-models.html">生成式模型可信研究</a><a href="topics/research-on-llms-and-vlms.html">大语言/视觉语言模型安全</a></div>
+          <strong>独特性：从固定任务鲁棒性推进到开放生成、语义一致性与系统级安全</strong>
+        </li>
+      </ol>
+
+      <div class="continuity-matrix" aria-label="研究创新连续性">
+        <div class="continuity-title">
+          <p class="eyebrow">Innovation Continuity</p>
+          <h3>三条持续演进的创新轴</h3>
+        </div>
+        <div class="continuity-row">
+          <strong>风险对象</strong>
+          <span>传感缺失与噪声</span><span>模型扰动与决策边界</span><span>攻击面与后门行为</span><span>生成语义与多模态交互</span>
+        </div>
+        <div class="continuity-row">
+          <strong>可信证据</strong>
+          <span>数据恢复与稳定预测</span><span>可达域与概率保证</span><span>红队评测与防御增益</span><span>系统 guardrails 与路径一致性</span>
+        </div>
+        <div class="continuity-row">
+          <strong>系统边界</strong>
+          <span>设备与真实环境</span><span>深度模型与控制策略</span><span>高风险视觉系统</span><span>LLM、VLM 与生成模型</span>
+        </div>
+      </div>
+
+      <div class="logic-loop">
+        <strong>贯穿全程的闭环</strong>
+        <p>真实场景定义问题，理论与验证提供证据，攻击持续发现新边界，防御完成反馈修复；当模型范式演进到基础模型时，这套方法论继续支持开放世界中的安全评测、机制分析与系统防护。</p>
       </div>
     </section>
 
@@ -394,10 +385,38 @@
         <h2>论文成果总表</h2>
         <p>可按论文标题、作者、会议、主题或关键词搜索。Wenjie Ruan 加粗，星号代表第一作者或通讯作者。</p>
       </div>
+      <section class="timeline-explorer" aria-labelledby="timeline-title">
+        <div class="timeline-explorer-head">
+          <div>
+            <p class="eyebrow">Interactive Timeline</p>
+            <h3 id="timeline-title">成果时间分布</h3>
+            <p>点击年份，只显示该年度发表的论文；可与下方关键词搜索组合筛选。</p>
+          </div>
+          <button class="timeline-clear is-active" type="button" data-year="" aria-pressed="true">全部年份 <span>86</span></button>
+        </div>
+        <div class="timeline-scroll">
+          <div class="timeline-bars" role="group" aria-label="按发表年份筛选论文">
+            <button type="button" class="year-filter" data-year="2014" aria-pressed="false" style="--bar-height:44.2px"><b>3</b><span></span><em>2014</em></button>
+            <button type="button" class="year-filter" data-year="2015" aria-pressed="false" style="--bar-height:60.5px"><b>6</b><span></span><em>2015</em></button>
+            <button type="button" class="year-filter" data-year="2016" aria-pressed="false" style="--bar-height:76.7px"><b>9</b><span></span><em>2016</em></button>
+            <button type="button" class="year-filter" data-year="2017" aria-pressed="false" style="--bar-height:55.1px"><b>5</b><span></span><em>2017</em></button>
+            <button type="button" class="year-filter" data-year="2018" aria-pressed="false" style="--bar-height:60.5px"><b>6</b><span></span><em>2018</em></button>
+            <button type="button" class="year-filter" data-year="2019" aria-pressed="false" style="--bar-height:38.8px"><b>2</b><span></span><em>2019</em></button>
+            <button type="button" class="year-filter" data-year="2020" aria-pressed="false" style="--bar-height:60.5px"><b>6</b><span></span><em>2020</em></button>
+            <button type="button" class="year-filter" data-year="2021" aria-pressed="false" style="--bar-height:49.6px"><b>4</b><span></span><em>2021</em></button>
+            <button type="button" class="year-filter" data-year="2022" aria-pressed="false" style="--bar-height:49.6px"><b>4</b><span></span><em>2022</em></button>
+            <button type="button" class="year-filter" data-year="2023" aria-pressed="false" style="--bar-height:92.9px"><b>12</b><span></span><em>2023</em></button>
+            <button type="button" class="year-filter" data-year="2024" aria-pressed="false" style="--bar-height:120px"><b>17</b><span></span><em>2024</em></button>
+            <button type="button" class="year-filter" data-year="2025" aria-pressed="false" style="--bar-height:44.2px"><b>3</b><span></span><em>2025</em></button>
+            <button type="button" class="year-filter" data-year="2026" aria-pressed="false" style="--bar-height:76.7px"><b>9</b><span></span><em>2026</em></button>
+          </div>
+        </div>
+      </section>
       <label class="search-box">
         <span>搜索</span>
         <input id="paper-search" type="search" placeholder="输入关键词、主题、作者或会议..." autocomplete="off">
       </label>
+      <p class="filter-status" id="paper-filter-status" aria-live="polite">显示全部 86 篇论文</p>
       <div class="paper-list" id="paper-list">
     <article class="paper-card" 
       data-topic="Research on LLMs and VLMs"
@@ -1521,6 +1540,6 @@
     </section>
   </main>
   <footer>Generated from paper_keywords.csv, paper_bibliography.csv and papers_classified_by_topic.</footer>
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=20260801-relations"></script>
 </body>
 </html>

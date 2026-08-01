@@ -390,52 +390,50 @@ h2 {
   font-size: 13px;
   line-height: 1.55;
 }
-.continuity-matrix {
-  overflow-x: auto;
-  margin-top: 28px;
+.research-overview-figure {
+  margin: 28px 0 0;
+  padding-top: 24px;
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: #f9faf8;
 }
-.continuity-title {
-  min-width: 900px;
-  padding: 22px 18px 14px;
-}
-.continuity-title h3 {
-  margin: 0;
-  font-size: 22px;
-}
-.continuity-row {
+.research-overview-heading {
   display: grid;
-  grid-template-columns: 120px repeat(4, minmax(150px, 1fr));
-  min-width: 900px;
-  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 16px;
 }
-.continuity-row strong,
-.continuity-row span {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 64px;
-  padding: 12px 18px;
-  font-size: 13px;
-  line-height: 1.45;
+.research-overview-heading h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
 }
-.continuity-row strong {
-  color: #16384d;
-  background: #eaf0f3;
+.research-overview-heading > p {
+  margin: 0;
+  color: #536271;
+  font-size: 14px;
+  line-height: 1.65;
 }
-.continuity-row span {
-  border-left: 1px solid var(--line);
-  color: #3f4e5d;
+.research-overview-image {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #c9d3dd;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgb(32 50 68 / 9%);
 }
-.continuity-row span:not(:last-child)::after {
-  position: absolute;
-  z-index: 1;
-  right: -10px;
-  color: var(--warm);
-  content: "→";
-  font-weight: 900;
+.research-overview-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.research-overview-figure figcaption {
+  margin-top: 10px;
+  color: #667381;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0;
+  text-align: right;
+  text-transform: uppercase;
 }
 .logic-loop {
   display: grid;
@@ -896,6 +894,7 @@ footer {
   .hero-copy,
   .section-heading,
   .logic-heading,
+  .research-overview-heading,
   .split-band,
   .paper-detail-grid,
   .paper-figure-section { grid-template-columns: 1fr; }
@@ -944,4 +943,7 @@ footer {
     flex-direction: column;
   }
   .timeline-clear { width: 100%; }
+  .research-overview-image { overflow-x: auto; }
+  .research-overview-image img { width: 980px; max-width: none; }
+  .research-overview-figure figcaption { text-align: left; }
 }

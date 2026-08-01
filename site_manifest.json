@@ -1,5 +1,5 @@
 {
-  "total_papers": 84,
+  "total_papers": 85,
   "topics": {
     "Pervasive Computing and Robust Sensing": 20,
     "Robust Data Analytics": 14,
@@ -8,7 +8,7 @@
     "Attacking on DNNs": 8,
     "Defense on DNNs": 6,
     "Research on Generative Models": 4,
-    "Research on LLMs and VLMs": 6
+    "Research on LLMs and VLMs": 7
   },
   "pages": [
     "index.html",
@@ -103,8 +103,9 @@
     "papers/2015-cnipa.html",
     "papers/2014-jpc-a-modeling-and-control-approach-to-magnetic-levitation-system-based-on-state-dependent.html",
     "papers/2014-cikm-exploring-tag-free-rfid-based-passive-localization-and-tracking-via-learning-based-pro.html",
-    "papers/2014-mobiquitous-tagtrack-device-free-localization-and-tracking-using-passive-rfid-tags.html"
+    "papers/2014-mobiquitous-tagtrack-device-free-localization-and-tracking-using-passive-rfid-tags.html",
+    "papers/2025-tifs-scala-toward-imperceptible-and-efficient-black-box-textual-adversarial-perturbations.html"
   ],
-  "foundation_model_paper_pages": 10,
-  "chinese_paper_pages": 84
+  "foundation_model_paper_pages": 11,
+  "chinese_paper_pages": 85
 }

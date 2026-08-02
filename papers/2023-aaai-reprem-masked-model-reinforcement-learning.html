@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <title>RePreM：基于掩码模型的强化学习表征预训练 · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#8b6f24">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/robustness-theory-of-dnns.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Robustness%20Theory%20of%20DNNs/2023_AAAI_RePreM%20Representation%20Pre-training%20with%20Masked%20Model%20for%20Reinforcement%20Learning.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/robustness-theory-of-dnns.html">返回主题页面</a>
+      <p class="eyebrow">Robustness Theory of DNNs · 2023 · AAAI</p>
+      <h1>RePreM：基于掩码模型的强化学习表征预训练</h1>
+      <p class="paper-original-title">RePreM Representation Pre-training with Masked Model for Reinforcement Learning</p>
+      <p class="paper-authors-line">Yuanying Cai, Chuheng Zhang, Wei Shen, Xuyun Zhang, Wenjie Ruan, Longbo Huang</p>
+      <div class="paper-tags detail-tags"><span>Reinforcement Learning</span><span>Representation Pre-training</span><span>Masked Modeling</span><span>Long-Term Dynamics</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>强化学习从零训练样本效率低，既有表征预训练依赖复杂增强或多个动力学模型，并且往往只学习一步转移，难以捕获长期动态。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>论文结论</h2>
+        <p>RePreM 在 Atari-100k 上达到当时领先性能，并提升 Rainbow 与 SAC；它在长期动力学预测、未见任务迁移和样本高效学习中持续优于基线，且随数据量、数据质量和编码器规模稳定扩展。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Paper-grounded Academic Summary</p>
+        <h2>论文研究问题与技术路线</h2>
+        <p><strong>主要创新性：</strong>首次将 BERT 式掩码序列预训练用于强化学习，以单一自监督任务统一前向状态预测和逆向动作推断，同时建模长期动态。<br><strong>学术影响力：</strong>RePreM 在 Atari-100k 上达到当时领先性能，并提升 Rainbow 与 SAC；它在长期动力学预测、未见任务迁移和样本高效学习中持续优于基线，且随数据量、数据质量和编码器规模稳定扩展。该工作深化了对鲁棒性定义、风险度量与学习动态的理论理解，为后续验证和鲁棒学习研究提供了分析工具。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Robustness%20Theory%20of%20DNNs/2023_AAAI_RePreM%20Representation%20Pre-training%20with%20Masked%20Model%20for%20Reinforcement%20Learning.pdf#page=3" target="_blank" rel="noopener">打开原文第 3 页</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2023-aaai-reprem-masked-model-reinforcement-learning.png?v=20260802-contain" target="_blank" rel="noopener" aria-label="查看论文研究问题与技术路线大图">
+        <img src="../assets/paper-figures/2023-aaai-reprem-masked-model-reinforcement-learning.png?v=20260802-contain" alt="论文研究问题、技术路线与创新总结">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>从无奖励离线轨迹中随机掩码连续状态或动作</li>
+              <li>分别编码状态与动作，并用 GTrXL 对完整交错轨迹进行双向序列建模</li>
+              <li>以对比损失预测掩码项嵌入，固定预训练状态编码器适配下游 RL 任务</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>首次将 BERT 式掩码序列预训练用于强化学习，以单一自监督任务统一前向状态预测和逆向动作推断，同时建模长期动态。</li>
+              <li>论文证据：RePreM 在 Atari-100k 上达到当时领先性能，并提升 Rainbow 与 SAC；它在长期动力学预测、未见任务迁移和样本高效学习中持续优于基线，且随数据量、数据质量和编码器规模稳定扩展。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

@@ -1,14 +1,14 @@
 {
-  "total_papers": 87,
+  "total_papers": 91,
   "topics": {
     "Pervasive Computing and Robust Sensing": 20,
     "Robust Data Analytics": 14,
-    "Robustness Theory of DNNs": 12,
+    "Robustness Theory of DNNs": 14,
     "Verification on DNNs": 14,
     "Attacking on DNNs": 8,
-    "Defense on DNNs": 7,
+    "Defense on DNNs": 8,
     "Research on Generative Models": 4,
-    "Research on LLMs and VLMs": 8
+    "Research on LLMs and VLMs": 9
   },
   "pages": [
     "index.html",
@@ -106,8 +106,12 @@
     "papers/2014-mobiquitous-tagtrack-device-free-localization-and-tracking-using-passive-rfid-tags.html",
     "papers/2025-tifs-scala-toward-imperceptible-and-efficient-black-box-textual-adversarial-perturbations.html",
     "papers/2026-eccv-paco-stabilizing-vision-embeddings-along-local-paths-for-robust-vision-language-models.html",
-    "papers/2025-iccv-adversarial-training-for-probabilistic-robustness.html"
+    "papers/2025-iccv-adversarial-training-for-probabilistic-robustness.html",
+    "papers/2026-kdd-prbench-probabilistic-robustness-benchmark.html",
+    "papers/2026-pricai-interpreting-safety-llm-stpa.html",
+    "papers/2025-icdm-fap-foveation-inspired-adversarial-purification.html",
+    "papers/2023-aaai-reprem-masked-model-reinforcement-learning.html"
   ],
-  "foundation_model_paper_pages": 12,
-  "chinese_paper_pages": 87
+  "foundation_model_paper_pages": 13,
+  "chinese_paper_pages": 91
 }

@@ -416,6 +416,8 @@ h2 {
 .research-overview-image {
   display: block;
   overflow: hidden;
+  width: 80%;
+  margin-inline: auto;
   border: 1px solid #c9d3dd;
   border-radius: 6px;
   background: #fff;
@@ -943,7 +945,7 @@ footer {
     flex-direction: column;
   }
   .timeline-clear { width: 100%; }
-  .research-overview-image { overflow-x: auto; }
+  .research-overview-image { width: 100%; overflow-x: auto; }
   .research-overview-image img { width: 980px; max-width: none; }
   .research-overview-figure figcaption { text-align: left; }
 }

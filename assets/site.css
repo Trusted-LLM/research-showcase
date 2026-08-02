@@ -565,6 +565,72 @@ h2 {
   background: var(--warm);
   transform: scaleX(1.08);
 }
+.topic-filter-panel {
+  border-top: 1px solid var(--line);
+  background: #fafbf9;
+}
+.topic-filter-head {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 14px 8px;
+}
+.topic-filter-head strong {
+  color: #263746;
+  font-size: 14px;
+}
+.topic-filter-head span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.topic-filter-scroll {
+  overflow-x: auto;
+  padding: 0 14px 14px;
+}
+.topic-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(130px, 1fr));
+  gap: 8px;
+  min-width: 1120px;
+}
+.topic-filter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  min-height: 64px;
+  padding: 9px 10px;
+  border: 1px solid #ccd4da;
+  border-top: 4px solid var(--filter-color);
+  border-radius: 5px;
+  color: #31414f;
+  background: white;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+.topic-filter span {
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.4;
+}
+.topic-filter b {
+  color: var(--filter-color);
+  font-size: 16px;
+}
+.topic-filter:hover,
+.topic-filter:focus-visible {
+  border-color: var(--filter-color);
+  outline: 2px solid color-mix(in srgb, var(--filter-color) 25%, transparent);
+  outline-offset: 1px;
+}
+.topic-filter.is-active {
+  border-color: var(--filter-color);
+  color: color-mix(in srgb, var(--filter-color) 82%, #17202a);
+  background: color-mix(in srgb, var(--filter-color) 10%, white);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--filter-color) 28%, transparent);
+}
 .filter-status {
   margin: -2px 0 14px;
   color: #556270;
@@ -945,6 +1011,11 @@ footer {
     flex-direction: column;
   }
   .timeline-clear { width: 100%; }
+  .topic-filter-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
   .research-overview-image { width: 100%; overflow-x: auto; }
   .research-overview-image img { width: 980px; max-width: none; }
   .research-overview-figure figcaption { text-align: left; }

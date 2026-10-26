@@ -1,12 +1,12 @@
 {
-  "total_papers": 100,
+  "total_papers": 101,
   "topics": {
     "Pervasive Computing and Robust Sensing": 20,
     "Robust Data Analytics": 14,
     "Robustness Theory of DNNs": 14,
     "Verification on DNNs": 14,
     "Attacking on DNNs": 10,
-    "Defense on DNNs": 7,
+    "Defense on DNNs": 8,
     "Research on Generative Models": 5,
     "Research on LLMs and VLMs": 16
   },
@@ -119,7 +119,8 @@
     "papers/2026-cnipa-mllm-object-hallucination-suppression.html",
     "papers/2026-cnipa-intersection-union-constrained-llm-quantization-attack-defense.html",
     "papers/2026-cnipa-dictionary-guided-sparse-logit-editing-jailbreak-evaluation.html",
-    "papers/2026-cnipa-medical-vision-model-fairness-detection.html"
+    "papers/2026-cnipa-medical-vision-model-fairness-detection.html",
+    "papers/2025-icdm-fap-foveation-inspired-adversarial-purification.html"
   ],
   "foundation_model_paper_pages": 17,
   "chinese_paper_pages": 95

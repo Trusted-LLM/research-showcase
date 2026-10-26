@@ -1020,3 +1020,195 @@ footer {
   .research-overview-image img { width: 980px; max-width: none; }
   .research-overview-figure figcaption { text-align: left; }
 }
+
+/* ===== 2026-10 UX pass ===== */
+.paper-card {
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.paper-card:hover {
+  border-color: color-mix(in srgb, var(--topic-color, var(--accent)) 45%, var(--line));
+  box-shadow: 0 6px 20px rgba(31, 39, 48, .09);
+  transform: translateY(-1px);
+}
+.paper-pub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.paper-pub span {
+  padding: 2px 7px;
+  border: 1px solid color-mix(in srgb, var(--topic-color, var(--accent)) 30%, var(--line));
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--topic-color, var(--accent)) 8%, white);
+  font-size: 11px;
+}
+.paper-venue {
+  color: #1f2937;
+}
+.year-divider {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 18px 0 4px;
+  padding: 0 2px 6px;
+  border-bottom: 1px solid var(--line);
+}
+.year-divider:first-child { margin-top: 4px; }
+.year-divider b {
+  color: var(--accent);
+  font-size: 19px;
+  font-weight: 900;
+}
+.year-divider span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+.year-divider[hidden] { display: none; }
+
+.filter-bar {
+  position: sticky;
+  top: 58px;
+  z-index: 12;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 14px rgba(31, 39, 48, .06);
+}
+.filter-bar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.filter-bar-row .search-box {
+  flex: 1 1 260px;
+  margin-bottom: 0;
+}
+.mini-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #f7f8f6;
+  cursor: pointer;
+}
+.mini-select > span {
+  color: #465363;
+  font-size: 12px;
+  font-weight: 850;
+}
+.mini-select select {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+}
+.filter-bar .filter-status { margin: 8px 0 0; }
+.active-chips:empty { display: none; }
+.active-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 26px;
+  padding: 3px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: #17384a;
+  background: #eef4f7;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+}
+.chip::after {
+  color: var(--warm);
+  content: "×";
+  font-size: 14px;
+}
+.chip:hover { background: #e2ecf1; }
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: #41505e;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 6px 18px rgba(31, 39, 48, .12);
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 900;
+}
+.to-top:hover { color: white; background: var(--accent); }
+.to-top[hidden] { display: none; }
+
+.empty-state {
+  display: none;
+  padding: 38px 0;
+  color: var(--muted);
+  text-align: center;
+}
+.empty-state button { margin-top: 12px; }
+
+@media (max-width: 640px) {
+  .filter-bar { top: 96px; }
+  .paper-pub { font-size: 13px; }
+}
+
+@media print {
+  .site-header,
+  .filter-bar,
+  .timeline-explorer,
+  .to-top,
+  .network-wrap { display: none !important; }
+  body { background: white; }
+  .paper-card { break-inside: avoid; border-color: #999; }
+  .paper-actions, .figure-frame { display: none; }
+  .year-divider { break-after: avoid; }
+  a { text-decoration: none; }
+  @page { margin: 16mm; }
+}
+
+.bib-copy {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px dashed color-mix(in srgb, var(--topic-color, var(--accent)) 45%, var(--line));
+  border-radius: 6px;
+  color: var(--topic-color, var(--accent));
+  background: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 850;
+}
+.bib-copy:hover {
+  color: white;
+  background: var(--topic-color, var(--accent));
+  border-style: solid;
+}

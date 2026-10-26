@@ -1337,15 +1337,15 @@ footer {
   .card-actions, .card-tags { margin-left: 0; }
 }
 
-/* ===== 动作按钮与关键词标签缩到 60%（2026-10-26） ===== */
+/* ===== 动作按钮与关键词标签放大到 130%（2026-10-26） ===== */
 .card-actions a,
 .card-actions .bib-copy {
-  min-height: 13px;
-  padding: 1px 5px;
-  font-size: 6.6px;
+  min-height: 16.9px;
+  padding: 1.3px 6.5px;
+  font-size: 8.58px;
 }
 .card-tags span {
-  min-height: 11px;
-  padding: 1px 4px;
-  font-size: 6.3px;
+  min-height: 14.3px;
+  padding: 1.3px 5.2px;
+  font-size: 8.19px;
 }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <title>DTB：当消毒成为触发器——防御触发的后门攻击 · 中文论文解读</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="paper-detail-page" style="--topic-color:#c8453d">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/attacking-on-dnns.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Attacking%20on%20DNNs/2026_NeurIPS_When%20Sanitization%20Becomes%20the%20Trigger%20Defense-Triggered%20Backdoor%20Attacks.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/attacking-on-dnns.html">返回主题页面</a>
+      <p class="eyebrow">Attacking on DNNs · 2026 · NeurIPS</p>
+      <h1>DTB：当消毒成为触发器——防御触发的后门攻击</h1>
+      <p class="paper-original-title">When Sanitization Becomes the Trigger: Defense-Triggered Backdoor Attacks</p>
+      <p class="paper-authors-line">Zhiguo Yang, Ruotian Liu, Perley Xu, Wenjie Ruan</p>
+      <div class="paper-tags detail-tags"><span>后门攻击</span><span>防御触发</span><span>模型消毒</span><span>DNN 安全</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>后门消毒被广泛视为安全部署第三方模型的关键防线，但防御过程本身能否被攻击者利用、演变为新的攻击面，此前尚未被刻画。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>论文结论</h2>
+        <p>在多数据集、不同网络与 14 种代表性防御上，DTB 都能稳定触发隐藏后门，且在多轮组合消毒后依然显著，提示消毒后的安全性不能仅以“原后门是否消除”来判断。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Paper-grounded Academic Summary</p>
+        <h2>论文研究问题与技术路线</h2>
+        <p><strong>主要创新性：</strong>首次揭示“防御过程可沦为条件触发器”这一威胁：同时植入正常激活的诱饵后门与休眠的隐藏后门，使消毒在抑制诱饵后门的同时激活隐藏后门；用双层优化逼近主流防御的共享消毒效应，并约束隐藏后门只在诱饵后门被充分抑制后激活。<br><strong>学术影响力：</strong>揭示了现有后门防御流水线的潜在威胁，提示防御设计需同时考虑消毒过程本身的安全性，为条件后门攻击研究开辟新方向。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Attacking%20on%20DNNs/2026_NeurIPS_When%20Sanitization%20Becomes%20the%20Trigger%20Defense-Triggered%20Backdoor%20Attacks.pdf" target="_blank" rel="noopener">打开原文 PDF</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2026-neurips-when-sanitization-becomes-the-trigger-defense-triggered-backdoor-attacks.png?v=20261026-contain" target="_blank" rel="noopener" aria-label="查看论文研究问题与技术路线大图">
+        <img src="../assets/paper-figures/2026-neurips-when-sanitization-becomes-the-trigger-defense-triggered-backdoor-attacks.png?v=20261026-contain" alt="论文研究问题、技术路线与创新总结">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+              <li>同时植入诱饵后门（正常激活）与隐藏后门（休眠）</li>
+              <li>用双层优化逼近主流后门防御的共享消毒效应</li>
+              <li>约束隐藏后门仅在诱饵后门被充分抑制后激活</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+              <li>首次把后门消毒过程本身反转利用为条件触发器，提出 DTB 攻击。</li>
+              <li>论文证据：14 种代表性防御下稳定触发隐藏后门，多轮组合消毒后仍显著。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local PDFs for Chinese paper presentation.</footer>
+</body>
+</html>

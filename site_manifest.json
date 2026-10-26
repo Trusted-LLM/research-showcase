@@ -109,8 +109,13 @@
     "papers/2025-iccv-adversarial-training-for-probabilistic-robustness.html",
     "papers/2026-kdd-prbench-probabilistic-robustness-benchmark.html",
     "papers/2026-pricai-interpreting-safety-llm-stpa.html",
-    "papers/2023-aaai-reprem-masked-model-reinforcement-learning.html"
+    "papers/2023-aaai-reprem-masked-model-reinforcement-learning.html",
+    "papers/2026-neurips-manifold-aligned-adversarial-perturbation-for-anti-customization-under-diffusion-based-purification.html",
+    "papers/2026-neurips-when-sanitization-becomes-the-trigger-defense-triggered-backdoor-attacks.html",
+    "papers/2026-emnlp-mitigating-object-hallucination-in-mllms-with-global-to-local-visual-attention-correction.html",
+    "papers/2026-ccf-tpci-when-llms-become-ubiquitous-a-comprehensive-survey-of-adversarial-vulnerabilities-in-llm-driven-pervasive-intelligent-systems.html",
+    "papers/2026-ieee-computer-beyond-textual-alchemy-explainable-diagnostics-for-llm-jailbreaks.html"
   ],
-  "foundation_model_paper_pages": 13,
-  "chinese_paper_pages": 90
+  "foundation_model_paper_pages": 17,
+  "chinese_paper_pages": 95
 }

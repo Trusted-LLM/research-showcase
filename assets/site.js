@@ -15,7 +15,7 @@ const norm = (v) => (v || "").trim();
 const yearOf = (card) => norm(card.querySelector(".paper-year")?.textContent);
 const titleOf = (card) => norm(card.querySelector("h3")?.textContent);
 const venueOf = (card) => {
-  const pub = card.querySelector(".paper-pub");
+  const pub = card.querySelector(".pub-text") || card.querySelector(".paper-pub");
   if (!pub) return "";
   const clone = pub.cloneNode(true);
   clone.querySelectorAll("span").forEach((n) => n.remove());
@@ -74,7 +74,7 @@ if (search && list) {
     ].join("\n");
   };
   cards.forEach((card) => {
-    const actions = card.querySelector(".paper-actions") || card.querySelector(".paper-body");
+    const actions = card.querySelector(".card-actions") || card.querySelector(".paper-actions") || card.querySelector(".paper-body");
     if (!actions || !card.querySelector(".paper-pub")) return;
     const btn = document.createElement("button");
     btn.type = "button";

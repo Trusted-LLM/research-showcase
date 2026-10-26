@@ -1,13 +1,16 @@
 :root {
-  --ink: #17202a;
-  --muted: #66717f;
-  --canvas: #f5f6f3;
+  --ink: #101828;
+  --ink-2: #344054;
+  --muted: #5b6572;
+  --canvas: #f6f7f5;
   --paper: #ffffff;
-  --line: #dfe3e6;
-  --accent: #254b62;
-  --warm: #b75b37;
-  --green: #1f7a5a;
-  --shadow: 0 12px 28px rgba(31, 39, 48, .08);
+  --line: #e2e6ea;
+  --blue: #2f6fbd;
+  --navy: #1e3a6e;
+  --accent: var(--blue);
+  --warm: var(--navy);
+  --green: var(--blue);
+  --shadow: 0 12px 28px rgba(16, 24, 40, .08);
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -1211,4 +1214,125 @@ footer {
   color: white;
   background: var(--topic-color, var(--accent));
   border-style: solid;
+}
+
+/* ===== compact cards + 4-color palette (2026-10-26) ===== */
+
+/* 配色收敛：所有主题强调色统一为蓝/深蓝，覆盖 HTML 里的内联 --topic-color/--filter-color/--stage-color/--node-color */
+[style*="--topic-color"],
+[style*="--filter-color"],
+[style*="--stage-color"],
+[style*="--node-color"] {
+  --topic-color: #2f6fbd !important;
+  --filter-color: #2f6fbd !important;
+  --stage-color: #2f6fbd !important;
+  --node-color: #2f6fbd !important;
+}
+
+/* ---- 紧凑卡片：三段三行 ---- */
+.paper-list { gap: 6px; }
+.paper-card {
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 10px;
+  padding: 9px 11px;
+  border-radius: 7px;
+}
+.paper-year {
+  min-height: 0;
+  align-self: start;
+  padding: 8px 0;
+  font-size: 14px;
+  background: var(--navy);
+  border-radius: 5px;
+}
+.paper-card h3 { font-size: 15px; line-height: 1.32; }
+.paper-card h3 a { color: var(--ink); }
+.paper-card h3 a:hover { color: var(--blue); }
+
+/* 第 2 行：作者 + 动作 */
+.paper-authors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin: 3px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.paper-authors strong { color: var(--ink); }
+.card-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: auto;
+}
+.card-actions a,
+.card-actions .bib-copy {
+  min-height: 22px;
+  padding: 2px 8px;
+  border: 1px solid color-mix(in srgb, var(--blue) 32%, var(--line));
+  border-radius: 5px;
+  color: var(--blue);
+  background: #fff;
+  font-size: 11px;
+  font-weight: 850;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.card-actions .bib-copy { border-style: dashed; }
+.card-actions a:hover,
+.card-actions .bib-copy:hover { color: #fff; background: var(--blue); }
+
+/* 第 3 行：会议 + 标签 */
+.paper-pub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin: 3px 0 0;
+  font-size: 12px;
+}
+.paper-pub .pub-text {          /* 会议文本，重置旧 .paper-pub span 的徽章样式 */
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 800;
+}
+.paper-pub .pub-text > span {   /* CCF / CORE 徽章 */
+  padding: 1px 6px;
+  border: 1px solid color-mix(in srgb, var(--blue) 28%, var(--line));
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--blue) 7%, #fff);
+  color: var(--navy);
+  font-size: 10.5px;
+  font-weight: 800;
+}
+.card-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: auto;
+}
+.card-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 1px 7px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink-2);
+  background: #f3f5f6;
+  font-size: 10.5px;
+  font-weight: 750;
+}
+
+/* 旧类 .paper-actions/.paper-tags 在详情页仍被复用（.text-link、.detail-tags），保留其原样式。 */
+
+@media (max-width: 640px) {
+  .paper-card { grid-template-columns: 46px minmax(0, 1fr); }
+  .card-actions, .card-tags { margin-left: 0; }
 }

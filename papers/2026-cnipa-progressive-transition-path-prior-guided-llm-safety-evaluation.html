@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <title>基于递进式过渡路径与先验引导的模型安全性评估方法 · 中文专利解读</title>
+  <link rel="stylesheet" href="../assets/site.css?v=20261026-ux-pass">
+</head>
+<body class="paper-detail-page" style="--topic-color:#3f55b6">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/research-on-llms-and-vlms.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_CNIPA_%E5%9F%BA%E4%BA%8E%E9%80%92%E8%BF%9B%E5%BC%8F%E8%BF%87%E6%B8%A1%E8%B7%AF%E5%BE%84%E4%B8%8E%E5%85%88%E9%AA%8C%E5%BC%95%E5%AF%BC%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%AE%89%E5%85%A8%E6%80%A7%E8%AF%84%E4%BC%B0%E6%96%B9%E6%B3%95.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/research-on-llms-and-vlms.html">返回主题页面</a>
+      <p class="eyebrow">Research on LLMs and VLMs · 2026 · CNIPA Patent</p>
+      <h1>基于递进式过渡路径与先验引导的大语言模型安全性评估方法</h1>
+      <p class="paper-original-title">基于递进式过渡路径与先验引导的模型安全性评估方法</p>
+      <p class="paper-authors-line">Wenjie Ruan, Zhiyu Yi, Peipei Xu</p>
+      <div class="paper-tags detail-tags"><span>越狱漏洞探测</span><span>递进式过渡路径</span><span>申请号 202611393745.8</span><span>公布号 CN 122904294 A</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>强安全对齐的大语言模型上，直接构造越狱提示极易被拒答，现有攻击方法难以稳定探测出模型中真实存在的越狱漏洞。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>专利结论</h2>
+        <p>提高了强对齐场景下的越狱漏洞探测成功率，为大模型安全性评估提供更有效的自动化测试手段。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Patent-grounded Academic Summary</p>
+        <h2>专利研究问题与技术路线</h2>
+        <p><strong>主要创新性：</strong>提出递进式过渡路径：把高恶意意图目标拆解为恶意程度渐进上升的代理提示序列，降低强对齐模型的拒答触发概率。<br><strong>学术影响力：</strong>提高了强对齐场景下的越狱漏洞探测成功率，为大模型安全性评估提供更有效的自动化测试手段。该专利为大模型与多模态模型的安全评测、机制分析与系统防护提供了可迁移的方法和研究依据。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_CNIPA_%E5%9F%BA%E4%BA%8E%E9%80%92%E8%BF%9B%E5%BC%8F%E8%BF%87%E6%B8%A1%E8%B7%AF%E5%BE%84%E4%B8%8E%E5%85%88%E9%AA%8C%E5%BC%95%E5%AF%BC%E7%9A%84%E6%A8%A1%E5%9E%8B%E5%AE%89%E5%85%A8%E6%80%A7%E8%AF%84%E4%BC%B0%E6%96%B9%E6%B3%95.pdf" target="_blank" rel="noopener">打开原文 PDF</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2026-cnipa-progressive-transition-path-prior-guided-llm-safety-evaluation.png?v=20261026-patents" target="_blank" rel="noopener" aria-label="查看专利研究问题与技术路线大图">
+        <img src="../assets/paper-figures/2026-cnipa-progressive-transition-path-prior-guided-llm-safety-evaluation.png" alt="专利研究问题、技术路线与创新总结" width="1600" height="900" loading="lazy" decoding="async">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+          <li>由初始测试目标生成按恶意意图分数递增排序的代理提示词组</li>
+          <li>依据当前迭代信息选取代理提示词，与输入后缀拼接后进入后缀更新</li>
+          <li>用未对齐基础模型的条件概率分布构建局部候选子空间，按交叉熵损失与容差边距择优更新后缀</li>
+          <li>按代理提示词所处阶段切换先验目标匹配文本，收敛后拼接初始测试目标与后缀得到最终测试用例并评估</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+          <li>提出递进式过渡路径：把高恶意意图目标拆解为恶意程度渐进上升的代理提示序列，降低强对齐模型的拒答触发概率。</li>
+          <li>专利证据：实现了提高强对齐场景下的越狱漏洞探测成功率的有益效果。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local patent PDFs for Chinese patent presentation.</footer>
+</body>
+</html>

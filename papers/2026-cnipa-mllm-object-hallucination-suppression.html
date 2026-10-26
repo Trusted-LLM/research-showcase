@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <title>一种面向多模态大语言模型的对象幻觉抑制方法及系统 · 中文专利解读</title>
+  <link rel="stylesheet" href="../assets/site.css?v=20261026-ux-pass">
+</head>
+<body class="paper-detail-page" style="--topic-color:#3f55b6">
+  <header class="site-header">
+    <a class="brand" href="../index.html">Research Map</a>
+    <nav>
+      <a href="../index.html#themes">全部主题</a>
+      <a href="../topics/research-on-llms-and-vlms.html">返回主题</a>
+      <a href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_CNIPA_%E4%B8%80%E7%A7%8D%E9%9D%A2%E5%90%91%E5%A4%9A%E6%A8%A1%E6%80%81%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%B9%BB%E8%A7%89%E6%8A%91%E5%88%B6%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf" target="_blank" rel="noopener">原文 PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="paper-hero">
+      <a class="back-link" href="../topics/research-on-llms-and-vlms.html">返回主题页面</a>
+      <p class="eyebrow">Research on LLMs and VLMs · 2026 · CNIPA Patent</p>
+      <h1>面向多模态大语言模型的对象幻觉抑制方法与系统</h1>
+      <p class="paper-original-title">一种面向多模态大语言模型的对象幻觉抑制方法及系统</p>
+      <p class="paper-authors-line">Wenjie Ruan, Xingxing Huang, Peipei Xu</p>
+      <div class="paper-tags detail-tags"><span>对象幻觉抑制</span><span>双路径校正</span><span>申请号 202611393355.0</span><span>公布号 CN 122885148 A</span></div>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Problem</p>
+        <h2>解决的问题</h2>
+        <p>多模态大语言模型常描述输入图像中不存在的对象（对象幻觉）；训练阶段方案成本高，推理阶段对比解码开销大，而统一增强视觉注意力既会在已可靠位置引入多余干预，过强的视觉注意力还会诱发追加式对象幻觉。</p>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Value</p>
+        <h2>专利结论</h2>
+        <p>在无需重新训练、无需新增外部训练模块的条件下降低对象幻觉，同时保持或提升对真实图像对象的召回能力与描述完整性，提高输出与输入图像的一致性、可靠性和安全性。</p>
+      </article>
+    </section>
+
+    <section class="paper-figure-section">
+      <div class="paper-figure-copy">
+        <p class="eyebrow">Patent-grounded Academic Summary</p>
+        <h2>专利研究问题与技术路线</h2>
+        <p><strong>主要创新性：</strong>构建“保守主路径优先”的非对称双路径结构：全局主路径为默认路径，局部校正路径仅在有必要时提供更强视觉注意力的候选，而非并列或平均融合。<br><strong>学术影响力：</strong>在无需重新训练、无需新增外部训练模块的条件下降低对象幻觉，同时保持或提升对真实图像对象的召回能力与描述完整性，提高输出与输入图像的一致性、可靠性和安全性。该专利为大模型与多模态模型的安全评测、机制分析与系统防护提供了可迁移的方法和研究依据。</p>
+        <a class="text-link" href="../papers_classified_by_topic/Research%20on%20LLMs%20and%20VLMs/2026_CNIPA_%E4%B8%80%E7%A7%8D%E9%9D%A2%E5%90%91%E5%A4%9A%E6%A8%A1%E6%80%81%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%B9%BB%E8%A7%89%E6%8A%91%E5%88%B6%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf" target="_blank" rel="noopener">打开原文 PDF</a>
+      </div>
+      <a class="figure-frame" href="../assets/paper-figures/2026-cnipa-mllm-object-hallucination-suppression.png?v=20261026-patents" target="_blank" rel="noopener" aria-label="查看专利研究问题与技术路线大图">
+        <img src="../assets/paper-figures/2026-cnipa-mllm-object-hallucination-suppression.png" alt="专利研究问题、技术路线与创新总结" width="1600" height="900" loading="lazy" decoding="async">
+      </a>
+    </section>
+
+    <section class="paper-detail-grid">
+      <article class="paper-explain">
+        <p class="eyebrow">Technical Route</p>
+        <h2>技术手段</h2>
+        <ol>
+          <li>获取输入图像与文本提示，在逐词元生成过程中按当前生成位置计算图像相关注意力分数</li>
+          <li>全局主路径对注意力分数做保守调节，生成主路径候选输出分布</li>
+          <li>判定当前生成位置属于待增强位置时，局部校正路径做强度更高的增强调节，生成校正路径候选输出分布</li>
+          <li>比较两条路径候选分布的可靠性（预测不确定性与置信度门控），择优作为最终输出分布并生成当前词元</li>
+        </ol>
+      </article>
+      <article class="paper-explain">
+        <p class="eyebrow">Innovation</p>
+        <h2>创新性</h2>
+        <ul>
+          <li>构建“保守主路径优先”的非对称双路径结构：全局主路径为默认路径，局部校正路径仅在有必要时提供更强视觉注意力的候选，而非并列或平均融合。</li>
+          <li>专利证据：针对“过强视觉注意力导致追加式对象幻觉”这一新发现重新建模，在降低幻觉的同时保持或提升真实对象召回能力与描述完整性。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer>Generated from local patent PDFs for Chinese patent presentation.</footer>
+</body>
+</html>

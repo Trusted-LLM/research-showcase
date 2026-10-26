@@ -1,14 +1,14 @@
 {
-  "total_papers": 95,
+  "total_papers": 100,
   "topics": {
     "Pervasive Computing and Robust Sensing": 20,
     "Robust Data Analytics": 14,
     "Robustness Theory of DNNs": 14,
     "Verification on DNNs": 14,
-    "Attacking on DNNs": 9,
+    "Attacking on DNNs": 10,
     "Defense on DNNs": 7,
     "Research on Generative Models": 5,
-    "Research on LLMs and VLMs": 12
+    "Research on LLMs and VLMs": 16
   },
   "pages": [
     "index.html",
@@ -114,7 +114,12 @@
     "papers/2026-neurips-when-sanitization-becomes-the-trigger-defense-triggered-backdoor-attacks.html",
     "papers/2026-emnlp-mitigating-object-hallucination-in-mllms-with-global-to-local-visual-attention-correction.html",
     "papers/2026-ccf-tpci-when-llms-become-ubiquitous-a-comprehensive-survey-of-adversarial-vulnerabilities-in-llm-driven-pervasive-intelligent-systems.html",
-    "papers/2026-ieee-computer-beyond-textual-alchemy-explainable-diagnostics-for-llm-jailbreaks.html"
+    "papers/2026-ieee-computer-beyond-textual-alchemy-explainable-diagnostics-for-llm-jailbreaks.html",
+    "papers/2026-cnipa-progressive-transition-path-prior-guided-llm-safety-evaluation.html",
+    "papers/2026-cnipa-mllm-object-hallucination-suppression.html",
+    "papers/2026-cnipa-intersection-union-constrained-llm-quantization-attack-defense.html",
+    "papers/2026-cnipa-dictionary-guided-sparse-logit-editing-jailbreak-evaluation.html",
+    "papers/2026-cnipa-medical-vision-model-fairness-detection.html"
   ],
   "foundation_model_paper_pages": 17,
   "chinese_paper_pages": 95
